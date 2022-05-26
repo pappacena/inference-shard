@@ -1,0 +1,3 @@
+worker/models/
+*.pyc
+__pycache__

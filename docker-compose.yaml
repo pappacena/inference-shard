@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  web:
+    build: router
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./router:/code
+  worker:
+    build: worker
+    volumes:
+      - ./worker/:/code/
+  redis:
+    image: "redis:alpine"
